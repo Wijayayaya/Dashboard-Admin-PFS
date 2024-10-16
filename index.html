@@ -1,0 +1,215 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bi bi-arrow-down-up"></i>
+          <span class="logo-name">UPnDOWN</span>
+        </div>
+
+        <div class="sidebar-content">
+          <div class="top-content">
+            <ul class="lists">
+              <li class="list">
+                <a href="#!" class="nav-link">
+                  <i class="bi bi-columns-gap"></i>
+                  <span class="link">Overview</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#!" class="nav-link">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span class="link">Growth</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#!" class="nav-link">
+                  <i class="bi bi-person-lines-fill"></i>
+                  <span class="link">Customers</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#!" class="nav-link">
+                  <i class="bi bi-file-earmark"></i>
+                  <span class="link">Reports</span>
+                </a>
+              </li>
+            </ul>
+            <br />
+          </div>
+
+          <div class="mid-content">
+            <ul class="lists">
+              <li class="list">
+                <a href="#!" class="nav-link">
+                  <i class="bi bi-chat-left-text"></i>
+                  <span class="link">Support</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#!" class="nav-link">
+                  <i class="bi bi-gear"></i>
+                  <span class="link">Settings</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <br />
+
+          <div class="bottom-content">
+            <ul class="lists">
+              <li class="list">
+                <a href="#!" class="nav-link">
+                  <i class="bi bi-box-arrow-left"></i>
+                  <span class="link">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main-container">
+      <div class="container-1">
+        <div class="header">
+          <h1>Overview</h1>
+        </div>
+
+        <div class="kpi">
+          <div class="header">
+            <h1>KPIs</h1>
+          </div>
+
+          <div class="kpi-content">
+            <div class="kpi-list">
+              <h1>Current MRR</h1>
+              <p>$855.4k</p>
+            </div>
+            <div class="kpi-list">
+              <h1>Current Customers</h1>
+              <p>127,754</p>
+            </div>
+            <div class="kpi-list">
+              <h1>Active Customers</h1>
+              <p>73.57%</p>
+            </div>
+          </div>
+
+          <div class="analytics">
+            <div class="header">
+              <h1>Analytics</h1>
+              <!-- <h1>:</h1> -->
+            </div>
+            <div class="chart-container">
+              <canvas id="doughnutChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-2">
+        <div class="top-nav">
+          <div class="search-container">
+            <input type="search" placeholder="Search..." class="search-bar" />
+            <i class="bi bi-search icon"></i>
+          </div>
+
+          <div class="right-container">
+            <i class="bi bi-bell"></i>
+            <div class="profile-container">
+              <img src="assets/img/AHMAD PANDU WIJAYA.jpg" alt="User Avatar" class="avatar" />
+              <span class="username">Wijaya</span>
+              <div class="dropdown">
+                <i class="bi bi-caret-down"></i>
+                <div class="dropdown-content">
+                  <a href="#">Profile</a>
+                  <a href="#">Settings</a>
+                  <a href="#">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="growth">
+          <div class="growth-header">
+            <h1>This Year Growth</h1>
+            <div class="date-range-picker">
+              <div class="dropdown-container">
+                <i class="bi bi-calendar3"></i>
+                <select id="date-range-select">
+                  <option value="Jan 08 - Aug 08">Jan 08 - Aug 08</option>
+                  <option value="Feb 01 - Sep 30">Feb 01 - Sep 30</option>
+                  <option value="Mar 15 - Dec 01">Mar 15 - Dec 01</option>
+                  <option value="Custom">Custom Date Range...</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="barChart-container">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+
+        <div class="activity">
+          <div class="activity-header">
+            <h1>Recent Activity</h1>
+            <select>
+              <option>Last 24h</option>
+              <option>Last 7 days</option>
+              <option>Last 30 days</option>
+            </select>
+          </div>
+          <div class="table-activity">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer</th>
+                  <th>Status</th>
+                  <th>Order Number</th>
+                  <th>Retained</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><img src="assets/img/person1.jpeg" alt="Jenny Wilson" class="customer-avatar" /> Jenny Wilson</td>
+                  <td>New Customer</td>
+                  <td>#0038160</td>
+                  <td>1 min ago</td>
+                  <td>$123.40</td>
+                </tr>
+                <tr>
+                  <td><img src="assets/img/person2.jpeg" alt="Guy Hawkins" class="customer-avatar" /> Guy Hawkins</td>
+                  <td>Signed up</td>
+                  <td>#0038159</td>
+                  <td>5 min ago</td>
+                  <td>$79.99</td>
+                </tr>
+                <tr>
+                  <td><img src="assets/img/person3.jpeg" alt="Ralph Edwards" class="customer-avatar" /> Ralph Edwards</td>
+                  <td>New Customer</td>
+                  <td>#0038158</td>
+                  <td>24 min ago</td>
+                  <td>$217.30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
